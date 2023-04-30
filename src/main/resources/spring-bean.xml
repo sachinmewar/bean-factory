@@ -1,0 +1,25 @@
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="employee" class="org.spring.model.Employee">
+        <constructor-arg name = "id" value="1" type = "Long"/>
+        <constructor-arg name = "name" value="Sachin Mewar" />
+        <constructor-arg name = "address" value="Gurgaon, India" />
+        <constructor-arg name = "phoneNumber" value="2131313123" />
+    </bean>
+
+    <bean id="employee1" class="org.spring.model.Employee">
+        <constructor-arg name = "id" value="2" type = "Long"/>
+        <constructor-arg name = "name" value="Java" />
+        <constructor-arg name = "address" value="Gurgaon, India" />
+        <constructor-arg name = "phoneNumber" value="123542312" />
+    </bean>
+
+    <bean id="employeeService" class="org.spring.service.EmployeeService">
+        <constructor-arg ref="employee1"/>
+    </bean>
+
+</beans>
